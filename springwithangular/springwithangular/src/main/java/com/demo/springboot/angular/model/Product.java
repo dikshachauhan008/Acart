@@ -2,11 +2,14 @@ package com.demo.springboot.angular.model;
 
 import java.util.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
@@ -29,6 +32,8 @@ public class Product {
 	String image_path;
 	Date last_modified_by;
 	
+	@Lob
+	@Basic(fetch=FetchType.LAZY)
 	@Column(name="logo")
 	private byte[] logo;
 	
