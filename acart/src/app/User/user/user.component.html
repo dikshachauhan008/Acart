@@ -1,0 +1,26 @@
+<div class="main-content">
+<div class="container">
+  <table class="table  table-bordered table-hover">
+    <tr>
+      <th>User_Id</th>
+      <th>Name</th>
+      <th>Mail_id</th>
+      <th>Account_type</th>
+      <th>Updated_By</th>
+      <th>Delete_button</th>
+      </tr>
+    
+    <tbody>
+        <tr  *ngFor="let user of users">
+            <td>{{user.user_id}}</td>
+            <td>{{user.user_name}}</td>
+            <td>{{user.mail_id}}</td>
+            <td>{{user.account_type}}</td>
+            <td>{{user.updated_by}}</td>
+            <td><button  class="btn btn-success"  (click)="deleteUser(user)"> Delete User</button></td>
+          </tr>
+    </tbody>
+      </table>
+      </div>
+    </div>
+

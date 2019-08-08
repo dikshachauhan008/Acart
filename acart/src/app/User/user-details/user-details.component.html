@@ -1,0 +1,23 @@
+<div class="main-content">
+        <p>Name: {{user.user_name}} </p>
+        <p>MailId: {{user.mail_id}}</p>
+        <p>============================User Address==============================================</p>
+        <table class="table table-bordered table-hover">
+        <tr>
+        <th>Address Info</th>
+        <th>Country_id</th>
+        <th>State_id</th>
+        <th>Delete_button</th>
+        </tr>
+        <tbody>
+        <tr  *ngFor="let address of addresses|addressFilter:filter1">
+        <td>{{address.address_info}}</td>
+        <td>{{address.country_id}}</td>
+        <td>{{address.state_id}}</td>
+        <td><button  class="btn btn-success"  (click)="deleteAddress(address)"> Delete Address</button></td>
+        </tr>
+        </tbody>
+
+        <br />
+        <a  routerLink="/addAddress" >Add new Address</a>
+                      

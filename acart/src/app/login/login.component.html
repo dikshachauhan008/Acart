@@ -1,0 +1,19 @@
+<div class="main-content">
+<div class="col-md-6">
+      <h2 class="text-center">Login User</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">User Name:</label>
+          <input type="text" name="username" [(ngModel)]="user.user_name" class="form-control" id="username">
+        </div>
+      
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" name="password" [(ngModel)]="user.password" class="form-control" id="password">
+        </div>
+     
+        <a  class="btn btn-success"  (click)="checkLogin()" >Login</a><br /><br />
+        <a  routerLink="/adduser" >New to Acart? Create an account</a>
+      </form>
+      </div>
+    </div>

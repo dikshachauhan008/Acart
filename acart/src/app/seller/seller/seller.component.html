@@ -1,0 +1,21 @@
+<div class="main-content">
+    <div class="container">
+      <table class="table  table-bordered table-hover">
+        <tr>
+          <th>Seller_Id</th>
+          <th>Name</th>
+          <th>Mail_id</th>
+          <th>Delete_button</th>
+          </tr>
+        
+        <tbody>
+            <tr  *ngFor="let seller of sellers">
+                <td>{{seller.seller_id}}</td>
+                <td>{{seller.seller_name}}</td>
+                <td>{{seller.mail_id}}</td>
+                <td><button  class="btn btn-success"  (click)="deleteSeller(seller)"> Delete Seller</button></td>
+              </tr>
+        </tbody>
+          </table>
+          </div>
+        </div>

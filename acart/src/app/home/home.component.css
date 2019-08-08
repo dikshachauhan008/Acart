@@ -1,0 +1,12 @@
+.body{
+    margin:0;
+    display:grid;
+    grid-template-columns: 15% auto;
+    grid-template-areas: 
+        "sidebar main"
+}
+
+.sidebar {
+    grid-area:sidebar;
+    padding-top:100px;
+}

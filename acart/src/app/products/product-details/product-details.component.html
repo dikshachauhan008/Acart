@@ -1,0 +1,16 @@
+
+        <div class="main-content">
+            <div *ngIf="product$ | async as product">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="card-title">{{product.product_name}}</div>
+                                <img [src]="'data:image/jpeg;base64,'+product.logo" style="width:100%">
+                          <p class="price">Price: {{product.price}}</p>
+                          <p> Description :{{product.short_desc}}</p>
+                          <p><button>Add to Cart</button></p>
+                        </div>
+                        </div>
+
+            </div>
+
+          </div>

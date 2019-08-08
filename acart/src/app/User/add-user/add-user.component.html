@@ -1,0 +1,26 @@
+<div class="main-content">
+<div class="col-md-6">
+    <h2 class="text-center">Register User</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="name" [(ngModel)]="user.user_name" placeholder="Name" name="Name" class="form-control" id="Name">
+      </div>
+    
+      <div class="form-group">
+        <label for="mail_id">Mail_id:</label>
+        <input [(ngModel)]="user.mail_id" placeholder="Mail_id" name="Mail_id" class="form-control" id="Mail_id">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" [(ngModel)]="user.password" placeholder="Password" name="password" class="form-control" id="password">
+      </div> 
+      <div class="form-group">
+        <label for="account_type">Account_type</label>
+        <input [(ngModel)]="user.account_type" placeholder="Account_type" name="Account_type" class="form-control" id="Account_type">
+      </div>
+    
+      <button class="btn btn-success" (click)="createUser()">Create</button>
+    </form>
+    </div>
+  </div>

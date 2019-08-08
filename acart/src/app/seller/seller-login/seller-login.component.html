@@ -1,0 +1,19 @@
+<div class="main-content">
+    <div class="col-md-6">
+          <h2 class="text-center">Login Seller</h2>
+          <form>
+            <div class="form-group">
+              <label for="sellername">Seller Name:</label>
+              <input type="text" name="sellername" [(ngModel)]="seller.seller_name" class="form-control" id="sellername">
+            </div>
+          
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" name="password" [(ngModel)]="seller.password" class="form-control" id="password">
+            </div>
+         
+            <a  class="btn btn-success"  (click)="checkLogin()">Login</a>
+            <a  routerLink="/addSeller" >New to Acart? Create a seller account</a>
+          </form>
+          </div>
+        </div>

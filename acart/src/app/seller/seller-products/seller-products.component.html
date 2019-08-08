@@ -1,0 +1,30 @@
+<div class="body">
+    <div class="sidebar">
+    <div class="button">
+        <div  *ngFor="let category of categories">
+            <button  class="btn btn-info" (click)="filterEvent(category)"  style="height:35px;width:100px">{{category.category_name}}</button>
+        </div>
+    </div>
+    </div>
+          <div class="main">
+            <div class="main-content">
+                <div class="row">
+                        <div *ngFor="let product of products|filterSellerProducts:filterdata:filter1">
+                            <div class="col-xs-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <div class="card-title">{{product.product_name}}</div>
+                             
+                              <img [src]="'data:image/jpeg;base64,'+product.logo" style="width:100%">
+                            
+                              <p class="price">Price: {{product.price}}</p>
+                              <p> Description :{{product.short_desc}}</p>
+                              <p><button>Delete the Product</button></p>
+                              
+                            </div>
+                            </div>
+                          </div>
+                          </div>
+                </div>
+              </div>
+            </div>

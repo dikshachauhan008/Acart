@@ -1,0 +1,19 @@
+<header>
+    <nav class ="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div><a href="/products" class="navbar-brand">ACART</a></div>
+    
+    <ul class="navbar-nav">
+      <li><a *ngIf="loginService.isUserAdmin()" routerLink="/viewusers" class="nav-link">View Users</a></li>
+    </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a  *ngIf="loginService.isUserShow()" routerLink="/login" class="nav-link"> Login & Signup</a></li>
+           <li><a *ngIf="loginService.isUserSeller()" routerLink="/addproduct" class="nav-link">Add Product</a></li>
+          <li><a  *ngIf="loginService.isUserAdmin()" routerLink="/viewsellers" class="nav-link">View Seller</a></li>
+          <li><a  *ngIf="loginService.isUserShow()" routerLink="/sellerLogin" class="nav-link">Seller Login & Sign</a></li>
+          <li><a *ngIf="loginService.isUserSeller()" routerLink="/sellerProducts" class="nav-link">My Product</a></li>
+          <li><a *ngIf="loginService.isUserCutomer()" routerLink="/myProfile" class="nav-link">My Profile</a></li>
+          <li><a *ngIf="!loginService.isUserShow()" routerLink="/logout" class="nav-link">LogOut</a></li>
+          
+         </ul>
+    </nav>
+    </header>
