@@ -1,2 +1,2 @@
 # Acart
-This is a online shoping cart in java spring boot and angular 8.
+This is an online shoping cart in java spring boot and angular 8.
